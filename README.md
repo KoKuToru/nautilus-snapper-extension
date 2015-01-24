@@ -7,7 +7,16 @@ Extension for Nautilus, makes it easy to open old versions
 `nautilus-python`
 
 #Install
-Copy `nautilus-snapper-extension.py` into `~/.local/share/nautilus-python/extensions`
+Archlinux
+------------
+<a href="https://aur.archlinux.org/packages/nautilus-snapper-extension-git/">MAKEPKG</a>
+```bash
+yaourt nautilus-snapper-extension-git
+```
+
+Others
+------------
+Copy `nautilus-snapper-extension.py` into `~/.local/share/nautilus-python/extensions`   
 Restart Nautilus.
 
 #Usage
@@ -29,7 +38,6 @@ It also wont show the actual state.
 * Display the description `snapper list` somehow.
 * Ability to simply `diff` (context-menu ?).
 * Message or something when access to `.snapshots` is denied.
-* AUR package.
 
 #Bugs
 `xdg-open` wont ask for which application to use for unknow 
