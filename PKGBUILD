@@ -2,17 +2,16 @@
 
 pkgrel=1
 pkgver=20150120
-pkgname=('nautilus-snapper-extension')
-pkgdesc="Extension for nautilus, adds ability to open old versions of files"
+pkgname=('nautilus-snapper-extension-git')
+pkgdesc="Extension for nautilus, adds ability to open old versions of files, when snapper is used"
 url="https://github.com/KoKuToru/gTox.git"
 license='GPL2'
 arch=('i686' 'x86_64')
-depends=('nautilus-python' 'xdg-utils')
-makedepends=()
+depends=('python2-nautilus' 'xdg-utils')
 source=(.AURINFO "${pkgname%-git}::git+https://github.com/KoKuToru/nautilus-snapper-extension.git")
 sha256sums=('SKIP' 'SKIP')
-provides=('nautilus-snapper-extension')
-conflicts=('nautilus-snapper-extension')
+provides=('nautilus-snapper-extension-git')
+conflicts=('nautilus-snapper-extension-git')
 
 pkgver()
 {
@@ -20,12 +19,8 @@ pkgver()
      git log -1 --format="%cd" --date=short | sed "s|-||g"
 }
 
-build()
-{
-    #do nothing
-}
-
 package()
 {
-	cp ${pkgname%-git}/*.py ${pkgdir}/usr/share/nautilus-python/extensions/
+    mkdir -p ${pkgdir}/usr/share/nautilus-python/extensions/
+    cp ${pkgname%-git}/*.py ${pkgdir}/usr/share/nautilus-python/extensions/
 }
