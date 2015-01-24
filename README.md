@@ -4,7 +4,7 @@ Extension for Nautilus, makes it easy to open old versions
 <img src="https://rawgit.com/KoKuToru/nautilus-snapper-extension/master/screenshot.png">
 
 #Dependencies
-`nautilus-python`
+`nautilus-python` and `python2`
 
 #Install
 Archlinux
@@ -12,12 +12,13 @@ Archlinux
 <a href="https://aur.archlinux.org/packages/nautilus-snapper-extension-git/">MAKEPKG</a>
 ```bash
 yaourt nautilus-snapper-extension-git
+killall nautilus
 ```
 
 Others
 ------------
 Copy `nautilus-snapper-extension.py` into `~/.local/share/nautilus-python/extensions`   
-Restart Nautilus.
+and `killall nautilus`
 
 #Usage
 Make sure your user has access to the `.snapshots` folders.  
