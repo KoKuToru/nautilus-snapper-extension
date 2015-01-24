@@ -1,7 +1,7 @@
 # nautilus-snapper-extension
 Extension for Nautilus, makes it easy to open old versions
 
-<img src="https://rawgit.com/KoKuToru/nautilus-snapper-extension/master/.png">
+<img src="https://rawgit.com/KoKuToru/nautilus-snapper-extension/master/screenshot.png">
 
 #Dependencies
 `nautilus-python`
