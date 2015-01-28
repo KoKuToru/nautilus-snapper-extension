@@ -1,3 +1,5 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 #Snapper Nautilus Extension
 #Luca Béla Palkovics
 #https://github.com/KoKuToru/nautilus-snapper-extension.git
@@ -26,7 +28,7 @@ def get_snapshot_paths(p):
             for folder in os.listdir(item[0]):
                 snapper_path = item[0] + "/" + folder + "/snapshot/" + item[1]
                 if os.path.isfile(snapper_path):
-                    modif = datetime.fromtimestamp(os.path.getmtime(snapper_path)).strftime("%c")
+                    modifi = datetime.fromtimestamp(os.path.getmtime(snapper_path)).strftime("%c")
                     found = False
                     for i in res:
                         if i[1] == modifi:
@@ -105,5 +107,3 @@ class ColumnExtension(GObject.GObject, Nautilus.PropertyPageProvider):
         filename = model.get_value(iter, 1)
         os.system("xdg-open " + urllib.unquote(filename))
         return
-
-
